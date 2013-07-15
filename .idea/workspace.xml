@@ -5,7 +5,7 @@
     <ignored path="anbado_github_io.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="c8f9d72e-dd3c-4e24-88cb-0636b6f4ce68" time="1372967641269" ignored="false" />
-    <file path="/index.html" changelist="c8f9d72e-dd3c-4e24-88cb-0636b6f4ce68" time="1372967851885" ignored="false" />
+    <file path="/index.html" changelist="c8f9d72e-dd3c-4e24-88cb-0636b6f4ce68" time="1372968342628" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="135" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.50961536">
+            <state line="31" column="56" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.41346154">
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="22" width="1346" height="705" extended-state="0" />
-    <editor active="true" />
+    <frame x="10" y="22" width="1346" height="705" extended-state="1" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -233,7 +233,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="135" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.50961536">
+        <state line="31" column="56" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.41346154">
           <folding />
         </state>
       </provider>
