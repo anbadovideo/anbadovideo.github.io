@@ -1,48 +1,157 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+<head>
+    <meta charset="utf-8">
+    <title>Anbado - interactive social media</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>anbado video project page</title>
-  </head>
+    <script type="text/javascript">
+        // from Kyle Larson (http://www.kylejlarson.com/blog/2012/creating-retina-images-for-your-website/)
+        $(function() {
+            if (window.devicePixelRatio == 2) {
+                var images = $("img.hires");
 
-  <body>
+                // loop through the images and make them hi-res
+                for (var i = 0; i < images.length; i++) {
+                    // create new image name
+                    var imageType = images[i].src.substr(-4);
+                    var imageName = images[i].src.substr(0, images[i].src.length - 4);
+                    imageName += "@2x" + imageType;
+
+                    //rename image
+                    images[i].src = imageName;
+                }
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        // from http://jsfiddle.net/mekwall/up4nu/
+        jQuery(function() {
+            // Cache selectors
+            var lastId;
+            var topMenu = $("#top-menu");
+            var topOffset = 70;
+            // All list items
+            var menuItems = topMenu.find("a");
+            // Anchors corresponding to menu items
+            var scrollItems = menuItems.map(function() {
+                var item = $($(this).attr("href"));
+                if (item.length)
+                    return item;
+            });
+
+            // Bind click handler to menu items
+            // so we can get a fancy scroll animation
+            menuItems.click(function(e) {
+                var href = $(this).attr("href"),
+                        offsetTop = href === "#" ? 0 : $(href).offset().top - topOffset + 1;
+                $('html, body').stop().animate({
+                    scrollTop: offsetTop
+                }, 300);
+                e.preventDefault();
+            });
+
+            // Bind to scroll
+            $(window).scroll(function() {
+                // Get container scroll position
+                var fromTop = $(this).scrollTop() + topOffset;
+
+                // Get id of current scroll item
+                var cur = scrollItems.map(function() {
+                    if ($(this).offset().top < fromTop)
+                        return this;
+                });
+                // Get the id of the current element
+                cur = cur[cur.length - 1];
+                var id = cur && cur.length ? cur[0].id : "";
+
+                if (lastId !== id) {
+                    lastId = id;
+                    // Set/remove active class
+                    menuItems
+                            .parent().removeClass("active")
+                            .end().filter("[href=#" + id + "]").parent().addClass("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
     <header>
-      <div class="inner">
-        <h1>anbado video git page io</h1>
-        <h2>anbado video는 시각적 비디오 그 이상을 추구합니다. git-hub에서 저희의 프로젝트를 확인하실 수 있습니다.</h2>
-        <a href="https://github.com/anbadovideo" class="button"><small>Follow me on</small>GitHub</a>
-      </div>
+        <h1 class="logo"><img src="images/logo.png" class="hires"></h1>
+
+        <p class="description">interactive social media</p>
+
+        <p class="view"><a href="http://github.com/anbadovideo">View the Projects on GitHub
+            <small>anbadovideo</small>
+        </a></p>
+        <ul id="top-menu">
+            <li><a href="#section-mission" class="active">Mission</a></li>
+            <li><a href="#section-team">Team</a></li>
+            <li><a href="#section-gift">Gift</a>
+                <ul>
+                    <li><a href="#section-gift-server">Server</a></li>
+                    <li><a href="#section-gift-player">Player</a></li>
+                    <li><a href="#section-gift-analytics">Analytics</a></li>
+                </ul>
+            </li>
+        </ul>
     </header>
+    <section>
+        <h1 id="section-mission">Mission
+            <small>우리가 이 일을 하는 이유</small>
+        </h1>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1 id="section-team">Team
+            <small>함께하는 사람들</small>
+        </h1>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-<p>안바도 비디오는 시각적 경험의 비디오 그 이상을 추구하는 개발 그룹입니다. 우리는 감상시점을 기반으로 사용자들이 감정과 의견을 남길 수 있는 비디오 플레이어와 그 의미를 분석할 수
-있는 분석 기술을 개발하고 있습니다. 이를 통해 사용자들에게는 동영상에 참여, 공유 경험을 제공하고, 콘텐츠 제공자에게는 그들이 서비스하는 콘텐츠가 실제로 어떻게 소비되는지를 알 수 있도록 하는 솔루션을 제공하는 것을 목표로 하고 있습니다. </p>
+        <h1 id="section-gift">Gift
+            <small>세상에 내놓는 선물</small>
+        </h1>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-        </section>
-        <aside id="sidebar">
+        <h2 id="section-gift-server">Server</h2>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+        <h2 id="section-gift-player">Player</h2>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
-    </div>
+        <h2 id="section-gift-analytics">Analytics</h2>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-  
-  </body>
+        <h1 id="helpus">Help us!
+            <small>우리를 도와주세요</small>
+        </h1>
+        <hr/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    </section>
+    <footer>
+        <p>This project is maintained by <a href="http://github.com/anbadovideo">Anbado Video</a></p>
+
+        <p>
+            <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
+            </small>
+        </p>
+    </footer>
+</div>
+<script src="javascripts/scale.fix.js"></script>
+</body>
 </html>
