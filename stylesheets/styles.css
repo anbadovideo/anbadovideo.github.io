@@ -213,10 +213,9 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+  float:right;
+  text-align: right;
+  width: 100%;
 }
 
 @media print, screen and (max-width: 960px) {
