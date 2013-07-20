@@ -5,7 +5,7 @@ body {
   font:14px/1.5 Quicksand, "Helvetica Neue", Helvetica, Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
   color: #fff;
   font-weight: 300;
-  background: #3B3C40;
+  background: #222;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1.logo {
-    background-color: #3B3C40;
+    background-color: #222;
 }
 
 p, ul, ol, table, pre, dl {
