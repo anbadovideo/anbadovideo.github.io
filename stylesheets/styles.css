@@ -1,5 +1,4 @@
-/*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);*/
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
 body {
   padding:50px;
@@ -39,17 +38,14 @@ h3, h4, h5, h6 {
 }
 
 a {
-  color:#39c;
+  color: #FA1E64;
   font-weight:400;
   text-decoration:none;
 }
 
-header a {
-  color: #FA1E64;
-}
-
 a:hover {
-  color:#069;
+  color: #fff;
+  background: #d60067;
 }
 
 a small {
