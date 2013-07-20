@@ -1,10 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+/*@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);*/
+@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
 
 body {
   padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  color:#777;
-  font-weight:300;
+  font:14px/1.5 Quicksand, "Helvetica Neue", Helvetica, Arial, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  color: #fff;
+  font-weight: 300;
+  background: #3B3C40;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +42,10 @@ a {
   color:#39c;
   font-weight:400;
   text-decoration:none;
+}
+
+header a {
+  color: #FA1E64;
 }
 
 a:hover {
@@ -198,7 +204,9 @@ header ul a strong {
 section {
   width:500px;
   float:right;
+  padding:20px;
   padding-bottom:50px;
+  background-color:#fff;
 }
 
 small {
@@ -295,19 +303,15 @@ p.description {
 
 header ul {
     list-style: none;
-    padding: 0;
+    background-color: #fff;
+    padding: 8px;
+    margin: 0;
 }
 
 header ul ul {
     margin-left: 2em;
 }
 
-header li>a {
-    width: 100%;
-    display: block;
-    background-color: #fff;
-}
-
-header li.active>a {
-    background-color: #EDF7F2;
+header li.active>a:after {
+    content: "*";
 }
