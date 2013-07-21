@@ -38,7 +38,7 @@
             // Cache selectors
             var lastId;
             var topMenu = $("#top-menu");
-            var topOffset = 70;
+            var topOffset = 90;
             // All list items
             var menuItems = topMenu.find("a");
             // Anchors corresponding to menu items
@@ -85,7 +85,7 @@
     </script>
 </head>
 <body>
-<div style="background: url('images/bg_img.png') no-repeat; background-size: 100%; width:100%; height:100%; position: fixed; right:0px; top:0px; z-index: -1"></div>
+<div style="background: url('images/bg_img.png') no-repeat; background-size: 100%; width:100%; height:100%; position: fixed; right:0; top:0; z-index: -1"></div>
 <div class="wrapper">
     <header>
         <h1 class="logo"><img src="images/logo.png" class="hires"></h1>
@@ -96,7 +96,7 @@
             <small>anbadovideo</small>
         </a></p>
         <ul id="top-menu">
-            <li><a href="#section-mission" class="active">Mission</a></li>
+            <li class="active"><a href="#section-mission">Mission</a></li>
             <li><a href="#section-team">Team</a></li>
             <li><a href="#section-gift">Gift</a>
                 <ul>
@@ -105,6 +105,7 @@
                     <li><a href="#section-gift-analytics">Analytics</a></li>
                 </ul>
             </li>
+            <li><a href="#section-helpus">Help us!</a></li>
         </ul>
     </header>
     <section>
@@ -138,7 +139,7 @@
         <hr/>
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
-        <h1 id="helpus">Help us!
+        <h1 id="section-helpus">Help us!
             <small>우리를 도와주세요</small>
         </h1>
         <hr/>
@@ -148,8 +149,11 @@
         <p>This project is maintained by <a href="http://github.com/anbadovideo">Anbado Video</a></p>
 
         <p>
-            <small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a>
+            <small>Hosted on GitHub Pages &mdash; Original Theme by <a
+                    href="https://github.com/orderedlist">orderedlist</a>
             </small>
+            <br/>
+            <small>Modified by Anbado Design Team</small>
         </p>
     </footer>
 </div>
