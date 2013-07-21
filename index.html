@@ -51,8 +51,8 @@
             // Bind click handler to menu items
             // so we can get a fancy scroll animation
             menuItems.click(function(e) {
-                var href = $(this).attr("href"),
-                        offsetTop = href === "#" ? 0 : $(href).offset().top - topOffset + 1;
+                var href = $(this).attr("href");
+                var offsetTop = href === "#" ? 0 : $(href).offset().top - topOffset + 1;
                 $('html, body').stop().animate({
                     scrollTop: offsetTop
                 }, 300);
@@ -85,7 +85,7 @@
     </script>
 </head>
 <body>
-<div style="background: url('images/bg_img.png') no-repeat; background-size: 100%; width:100%; height:100%; position: fixed; right:0; top:0; z-index: -1"></div>
+<div style="background: url('images/bg_img.png') no-repeat; background-size: 100%; width: 100%; height: 100%; position: fixed; right: 0; top: 0; z-index: -1"></div>
 <div class="wrapper">
     <header>
         <h1 class="logo"><img src="images/logo.png" class="hires"></h1>
