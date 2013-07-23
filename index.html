@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/icon-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <!--[if lt IE 9]>
@@ -83,6 +84,20 @@
             });
         });
     </script>
+
+    <script type="text/javascript">
+        jQuery(function() {
+            var $comments = $("p.comment");
+
+            $("#team img.profile").click(function() {
+                var $comment = $(this).parent("li").find($comments);
+
+                $comments.slideUp();
+                if (!$comment.is(':visible'))
+                    $comment.slideDown();
+            });
+        });
+    </script>
 </head>
 <body>
 <div style="background: url('images/bg_img.png') no-repeat; background-size: 100%; width: 100%; height: 100%; position: fixed; right: 0; top: 0; z-index: -1"></div>
@@ -119,8 +134,123 @@
             <small>함께하는 사람들</small>
         </h1>
         <hr/>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div id="team">
+            <p>시각적 경험으로서의 비디오 그 이상을 추구하는 안바도 팀은 2013년 7월 현재 미래창조과학부 주관 SW Maestro 과정을 수료한 사람들이 주축이 되어 팀을 이루고 있습니다.
+                팀원들의 프로필 이미지를 클릭하면, 보다 상세한 설명이 나타납니다.</p>
+            <ul>
+                <li>
+                    <img src="images/profile-haksu.jpg" class="profile"/>
 
+                    <div class="description">
+                        <p><span class="name">학수</span></p>
+
+                        <p class="icons">
+                            <a href="mailto:connect@anbado.com" target="_blank" data-icon="email"></a>
+                        </p>
+
+                        <p>공감하는 개발자 (Empathetic Developer)</p>
+                    </div>
+                    <p class="comment">학수는 문화적 상상력과 기술의 가능성을 바탕으로 한 새로운 서비스를 계획하는.... 됐고 그를 한 마디로 표현하자면 문화기술덕후입니다.
+                        그는 즐겁게 작업한 아이디어들을 사람들의 삶에 스며들게 하는 데에 관심이 있습니다. 특히 학수는 다른 사람들이 자신의 작업물을 사용하는 것을 매의 눈으로 지켜보는
+                        것을 즐깁니다. 학수는 안바도 비디오라는 생각의 씨앗을 많은 사람과 나누고 이야기하는 것을 좋아합니다. 가끔은 이야기를 너무 많이 해서 팀원들의 정신을 혼미하게
+                        만드는 부작용이 있기는 하지만, 대개 학수의 수다는 무해한 것으로 알려져 있습니다. 이야기를 나누는 것을 좋아하는 그는 프로그래밍할 때에도 컴퓨터와 많은 이야기를
+                        시도하는 것으로 알려져 있지만, 많은 경우 컴퓨터는 그의 바람을 들어주지 않는다고 전해집니다.</p>
+                </li>
+                <li>
+                    <img src="images/profile-yonghui.jpg" class="profile"/>
+
+                    <div class="description">
+                        <p><span class="name">용휘</span></p>
+
+                        <p class="icons"></p>
+
+                        <p>유랑자 (Wanderer)</p>
+                    </div>
+                    <p class="comment">디자인 스튜디오 PLUGxIN의 대표이기도 한 용휘는 사람과 사람, 기술과 감성이 모였을 때 나오는 시너지와 즐거움, 재미를 찾아 유랑하고
+                        있습니다. 단순히 시청하는 것 그 이상을 추구하는 안바도 팀과의 추구하는 것이 일치한다고 판단한 그는 안바도 팀에도 숟가락을 얹고야 말았습니다. 팀 내의 시각에
+                        관련된 모든 것은 그의 손을 거쳐 가고 있습니다. 팀의 로고를 만들던 중 왠지 로고가 어두운 배경에서는 별로 일 것 같다는 치완의 얘기를 듣고 그 로고가 어두운
+                        배경에 가장 잘 어울리는 로고가 되게끔 하며 치완을 데꿀멍 시킨 이야기는 널리 알려져 있습니다.</p>
+                </li>
+                <li><img src="images/profile-mijong.jpg" class="profile"/>
+
+                    <div class="description">
+                        <p><span class="name">미종</span></p>
+
+                        <p class="icons">
+                            <a href="mailto:mijong3000@anbado.com" target="_blank" data-icon="email"></a>
+                        </p>
+
+                        <p>배고픈 프로그래머 (Hungry Programmer)</p>
+                    </div>
+                    <p class="comment">미종은 국민대학교 전자공학부 출신으로 임베디드 소프트웨어에 지대한 관심이 있었지만, 학수의 유혹에 넘어가 잠시 웹으로 외도하여 안바도
+                        비디오의 플레이어 개발에 참여하고 있습니다. 스스로 배고픈 프로그래머라고 부를 정도로 팀 내에서도 굉장히 낮은 연비를 가지고 있으며, 버는 돈의 반을 밥값으로 쓰고
+                        있습니다. 다른 팀원들은 많은 연료(=밥)를 소비하는 미종을 고급차종에 빗대어 람보르기니라고 하지만, 정작 미종 자신은 그냥 연비가 나쁜 똥차라고 얘기하곤
+                        합니다.</p>
+                </li>
+                <li>
+                    <img src="images/profile-jinsoo.jpg" class="profile"/>
+
+                    <div class="description">
+                        <p><span class="name">진수</span></p>
+
+                        <p class="icons">
+                            <a href="mailto:hannjs@anbado.com" target="_blank" data-icon="email"></a>
+                        </p>
+
+                        <p>바싹 익은 개발자 (Well-done Developer)</p>
+                    </div>
+                    <p class="comment">진수는 컴활, 워드 자격증을 가지고 있는 팀 내의 몇 안 되는 프로그래머입니다. 자격증을 가지고 있으면 컴퓨터 숙련자라고 고등학교 때까지
+                        으스대다가 대학교에 입학한 후, 다른 세상을 맛보고 멘탈이 무너져 버렸습니다. 이후, '다들 대학 와서부터 시작할 거야'라는 희망찬 믿음을 가지고 한양대학교에서 컴퓨터
+                        공학을 공부하였으나, 중고등학교 때 부터 공부를 시작하여 단련된 능력자들을 만나 또 멘붕하였습니다. 요즘은 그들을 따라잡기 위해 평일은 물론 주말에도 가방에 공부할 거리를
+                        들고 다니며 실력 향상에 힘쓰고 있습니다. 덕분에 팀원들에게는 물론이요 주변 사람들에게도 무지 바쁜 사람으로 알려졌습니다. 안바도 팀 내에서는 클라이언트, 서버를 가리지
+                        않고 스크립트가 들어가는 모든 부분에 관여하고 있습니다. 아메리카노를 물과 같이 여길 정도로 좋아하여, 라X킹의 1리터 아메리카노를 출시를 적극 지지하는 입장입니다.</p>
+                </li>
+                <li>
+                    <img src="images/profile-minuk.jpg" class="profile"/>
+
+                    <div class="description">
+                        <p><span class="name">민욱</span></p>
+
+                        <p class="icons">
+                            <a href="mailto:taylor@anbado.com" target="_blank" data-icon="email"></a>
+                        </p>
+
+                        <p>서버 덕후 (Server Holic)</p>
+                    </div>
+                    <p class="comment">민욱은 자신을 개발자라기보다 서버 엔지니어에 가깝다고 생각하지만, 모두가 개발, 기획, 디자인에 의견을 내고 참여를 해야 하는 팀의 규칙에
+                        따라 서버 개발자로 활동하고 있습니다. 원래는 C#을 사랑하는 C# 바라기였으나, SW Maestro 과정을 통해 Python을 접하고 나서 Python 덕후로
+                        노선을 갈아타고 있습니다. 이후, 가능한 한 모든 프로그래밍을 Python으로 하려는 습성을 보이고 있으며 안바도 비디오의 서버 시스템이 Python으로 만들어지는데
+                        지대한 공헌을 하였습니다. 구글이 소유하고 있는 IDC와 동등한 규모의 IDC를 소유하고자 하는 꿈을 가지고 있습니다. 민욱은 그 정도 꿈은 소박하다고 생각하지만,
+                        팀원들은 별로 그렇게 생각하는 것 같지 않습니다. 서버용 장비 구매, 영상 관련 장비 구매, 카메라 구매 등을 취미로 즐기면서 매일 돈 나갈 곳이 너무나도 많다고
+                        하소연합니다.</p>
+                </li>
+                <li>
+                    <img src="images/profile-chiwan.jpg" class="profile"/>
+
+                    <div class="description">
+                        <p><span class="name">치완</span></p>
+
+                        <p class="icons">
+                            <a href="mailto:chiwanpark@anbado.com" target="_blank" data-icon="email"></a>
+                            <a href="https://www.facebook.com/chiwanpark" target="_blank" data-icon="facebook"></a>
+                            <a href="https://github.com/chiwanpark" target="_blank" data-icon="github"></a>
+                            <a href="http://blog.chiwanpark.com" target="_blank" data-icon="tumblr"></a>
+                        </p>
+
+                        <p>데이터의 열렬한 신봉자 (Ardent Believer of Data)</p>
+                    </div>
+                    <p class="comment">치완은 5살 때 아빠 몰래 게임을 하고자 컴퓨터를 켰다가 고장 내는 대형 사고를 저질렀고 그것을 수습하기 위해(…) 컴퓨터 계에
+                        입문하였습니다. 그 후, 컴퓨터 좀 만져본 친구들은 다 한다는 정보올림피아드 공부를 하며 프로그래밍 실력을 쌓아나갔습니다. 겉모습으로나 말하는 모습으로나 그는 컴퓨터
+                        공학과를 다닐 것 같지만 놀랍게도 연세대학교 지구시스템과학과에 재학 중입니다. 데이터 분석을 해보고 싶지만, 가지고 있는 데이터가 없어 데이터가 있을 것 같은 곳에는
+                        여기저기 기웃거립니다. 안바도 팀의 얘기를 듣고 난 후, 왠지 여기에는 데이터가 있을 것 같아 팀에 합류하게 되었습니다. 현재 안바도 비디오의 서버와 데이터 분석을
+                        위한 시스템 구축을 담당하고 있습니다. 더불어 팀 내에서 단 음식을 좋아하기로 유명하며 '포유류는 원래 단 음식을 먹도록 설계되었다'는 주장을 하며 자신의 단 음식
+                        섭취를 정당화하는 행위 또한 쉽게 관찰되고 있습니다.</p>
+                </li>
+            </ul>
+            <div class="description">
+
+            </div>
+        </div>
         <h1 id="section-gift">Gift
             <small>세상에 내놓는 선물</small>
         </h1>

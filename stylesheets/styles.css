@@ -236,3 +236,64 @@ header ul ul {
 header li.active>a:after {
     content: "*";
 }
+
+#team {
+    margin-bottom: 20px;
+}
+
+#team img.profile {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    cursor: pointer;
+    float: left;
+}
+
+#team ul {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 20px;
+    clear: both;
+}
+
+#team ul li {
+    display: block;
+    position: relative;
+    margin: 10px 0 0 10px;
+}
+
+#team li .description {
+    height: 80px;
+    padding: 10px 0 0 85px;
+}
+
+#team > .description {
+    clear: both;
+}
+
+#team li .comment {
+    display: none;
+}
+
+#team li .description p {
+    margin: 0;
+}
+
+#team li .description p.icons {
+    float: right;
+}
+
+#team li .description p a[data-icon] {
+    font-size: 1.6em;
+    color: #4f4f4f;
+}
+
+#team li .description p a[data-icon]:hover {
+    background-color: #fff;
+}
+
+#team .description .name {
+    font-size: 1.2em;
+    font-weight: 700;
+}
