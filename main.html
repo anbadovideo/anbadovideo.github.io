@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        html{
+            font-family: helvetica;
+        }
+        body{
+            font-family: helvetica;
+            background: #65d0d0 url('http://www.desktopwallpaperhd.net/wallpapers/12/b/black-pattern-125307.jpg');
+
+        }
+        #top_wrap{
+            width:960px;
+            height:100px;
+            float: left;
+            position: relative;
+            left:50%;
+            margin-left: -480px;
+        }
+
+        #content_wrap{ clear:both;width:960px; position: relative; left:50%; margin-left: -480px; margin-top: 0px; float: left;}
+        #main_video_wrap{width: 960px; height:540px; position: relative; background: #111; box-shadow: 0px 10px 40px rgba(0,0,0,0.3)}
+        #main_communication{}
+        #main_video{
+            width:300px;
+            height:300px;
+            background: url('images/logo.png') no-repeat;
+            background-size: cover;
+            left:50%;
+            margin-left:-150px;
+            top:50%;
+            margin-top: -150px;
+            position: absolute;
+        }
+
+        #main_join_wrap{
+            width:878px;
+            border:1px solid #ccc;
+            padding:40px;
+            margin-top: 40px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.6);
+        }
+        input{
+            border: 2px solid #ff5f0b;
+            padding:4px;
+            height:20px;
+            width:240px;
+        }
+
+        #main_join_btn{
+            height:32px;
+            padding:4px;
+            border:2px solid #006419;
+            color: #fff;
+            background: #009926;
+            box-shadow:0px 1px 0px #006419;
+            border-radius: 4px;
+            width:100px;
+            font-size:14pt;
+            float: right;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#00ad2b), to(#009926));
+            cursor:pointer
+        }
+        #main_join_terms{
+            margin-top: 20px;
+            font-size: 12px;
+
+            float: left;
+            color:#333333;
+        }
+
+        #main_join_facebook{
+            margin-top: 20px;
+            float:right;
+            font-size:12px;
+
+            color:#333333;
+        }
+
+        #main_list_wrap{
+            width:960px;
+            position: relative;
+            padding-bottom: 10px;
+
+
+        }
+
+        .main_thumbnail_wrap{
+            width:218px;
+            height:200px;
+
+            float: left;
+            padding:4px;
+            border:1px solid #eee;
+            margin-left:12px;
+            margin-top:20px;
+            background: rgba(255,255,255,0.8);
+        }
+
+        .main_thumbnail{
+            background: #111;
+            width:218px;
+            height:140px;
+            float:left;
+
+        }
+
+        .main_thumb_title{
+            margin-top: 8px;
+            font-size:20px;
+            font-widht:bold;
+            width:220px;
+            float:left;
+        }
+
+        .main_thumb_uploader{
+            font-size: 12px;
+            color:#999;
+            float:left
+        }
+
+        .line{
+            width:960px;
+            height:1px;
+            float:left;
+            background: #ccc;
+            margin-top: 10px;
+        }
+        #main_bottom_wrap{
+            width:960px;
+            height:100px;
+            margin-top: 40px;
+            color:#999;
+            font-size:12px;
+            float:left;
+        }
+
+        #bottom_company{
+            float:left;
+            font-weight: bold;
+        }
+        #main_bottom_wrap ul{
+            float: left;
+            margin: 0;
+            padding:0;
+
+        }
+
+        #main_bottom_wrap ul li{
+            float:left;
+            list-style: none;
+            margin-left: 14px;
+        }
+
+        #logo_img{
+            width:80px;
+            height:70px;
+            margin-top: 10px;
+            left:50%;
+            margin-left: -460px;
+            position: relative;
+            background: url('images/logo.png') no-repeat;
+            background-size: 140px;
+            background-position: -30px -30px;
+            float: left;
+        }
+
+        #logo_txt{
+            float:left;
+            position: relative;
+            top:30px;
+            color:#fff;
+            font-size: 20pt;
+            left:100px;
+            font-family: 'quicksand';
+        }
+
+
+        #sign_in{
+        position: relative;
+        float:left;
+            margin-top:40px;
+            left:50%;
+            margin-left: 240px;
+            color: #a4eff5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="top_wrap">
+        <div id="logo_img"></div>
+        <div id="logo_txt">anbado video</div>
+        <div id="sign_in">Sign In</div>
+    </div>
+
+    <div id="content_wrap">
+        <div id="main_video_wrap">
+            <div id="main_communication"></div>
+            <div id="main_video"></div>
+        </div>
+
+        <div id="main_join_wrap">
+            <input id="main_join_name" type="" placeholder="First Name and Last Name">
+            <input id="main_join_mail" type="" placeholder="E-mail Address">
+            <input id="main_join_pw" type="password" placeholder="password">
+
+            <button id="main_join_btn">JOIN</button>
+            <div id="main_join_terms">By joining anbado, you agree to our <a href="">Terms of Service</a></div>
+            <div id="main_join_facebook">Join with Facebook</div>
+        </div>
+        <div id="main_list_wrap" style="float:left">
+            <script type="text/javascript">
+                for(var i =0; i<= 10; i++){
+                    document.write('<div class="main_thumbnail_wrap">\
+                    <div class="main_thumbnail"></div>\
+                    <div class="main_thumb_title">강남스타일</div>\
+                    <div class="main_thumb_uploader">from Hannjs</div>\
+                </div>\
+                    ');
+                }
+            </script>
+
+        </div>
+        <div class="line"></div>
+        <div id="main_bottom_wrap">
+            <div id="bottom_company">anbado (c) 2013</div>
+            <ul>
+                <li>Help</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Jobs</li>
+                <li>Privacy</li>
+                <li>Temrs</li>
+            </ul>
+        </div>
+
+        <div style="top: -560px;
+position: relative;
+left: -230px;
+z-index: -1;"><img src="images/sofa.png" alt="" style="width: 1430px;"></div>
+    </div>
+
+
+
+
+</body>
+</html>
