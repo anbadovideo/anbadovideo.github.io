@@ -2,6 +2,9 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/plax.js"></script>
+
     <title></title>
     <style type="text/css">
         @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
@@ -10,9 +13,16 @@
             background: #000 url('http://static.theappl.com/2012/06/06/2041022442_f100b33b_32.jpg');
             background-size: cover;
             font-family: Lato, helvetica;
+            overflow: hidden;
+        }
+        #bg{
+            background: #000 url('http://static.theappl.com/2012/06/06/2041022442_f100b33b_32.jpg');
+            width: 100%;
+            height:100%;
+            position: absolute;
         }
         #login_box{
-            position: relative;
+            position: absolute;
             left:50%;
             margin-left: -100px;
             top:200px;
@@ -90,20 +100,63 @@
             margin-top: 4px;
         }
 
+        div#shell {
+            display: block;
+            position: relative;
+            margin: 100px auto;
+            width: 800px;
+            height: 500px;
+
+        }
+        div#shell{
+            z-index: 1;
+        }
+        div#nebula1{
+            width:500px;
+            height:400px;
+            position: absolute;
+            background: url('images/nebula.png') no-repeat;
+            z-index: 10;
+        }
+        div#nebula2{
+            width:500px;
+            height:400px;
+            left:50%;
+            top:20%;
+            position: absolute;
+            background: url('images/nebula.png') no-repeat;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
 
-<div id="login_box">
-    <div id="login_box_title">Log in</div>
-<input type="text" id="login_txt" placeholder="id (example@anbado.com)">
-<input type="password" id="pw_txt" placeholder="password">
-<input type="button" value="login" id="btn_login">
-<input type="button" value="facebook login" id="btn_login_f">
-<div id="forgot_id">아이디/비밀번호를 잃어버리셨나요?</div>
-<div id="for_signin">아이디가 없으신가요?</div>
-</div>
+<div id="bg"></div>
+    <div id="login_box">
+        <div id="login_box_title">Log in</div>
+    <input type="text" id="login_txt" placeholder="id (example@anbado.com)">
+    <input type="password" id="pw_txt" placeholder="password">
+    <input type="button" value="login" id="btn_login">
+    <input type="button" value="facebook login" id="btn_login_f">
+    <div id="forgot_id">아이디/비밀번호를 잃어버리셨나요?</div>
+    <div id="for_signin">아이디가 없으신가요?</div>
+    </div>
+    <div id="nebula1"></div>
+    <div id="nebula2"></div>
 
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#login_box').plaxify({"xRange":10,"yRange":10,"invert":true})
+        $('#nebula1').plaxify({"xRange":50,"yRange":30})
+        $('#nebula2').plaxify({"xRange":40,"yRange":30})
+        $('#bg').plaxify({"xRange":10,"yRange":10})
+
+
+        $.plax.enable()
+    })
+</script>
 
 </body>
 </html>
