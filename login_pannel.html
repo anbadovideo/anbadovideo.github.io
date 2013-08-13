@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+
+        body{
+            background: #000 url('http://static.theappl.com/2012/06/06/2041022442_f100b33b_32.jpg');
+            background-size: cover;
+            font-family: Lato, helvetica;
+        }
+        #login_box{
+            position: relative;
+            left:50%;
+            margin-left: -100px;
+            top:200px;
+
+            text-align: center;
+            width: 200px;
+            height:230px;
+            position: relative;
+            background: #333;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,0,0.7)), to(rgba(0,0,0,0.3)));
+            border-radius: 12px;
+            box-shadow: 0px 2px 0px #111, 0px 0px 10px #fff;
+            padding: 80px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            color: #fff;
+            font-size: 12px;
+        }
+        input{
+            padding:8px;
+            border-radius: 14px;
+            margin: 4px;
+            margin-left: auto;
+            border: none;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#111), to(#222));
+            box-shadow: 0px 0px 5px #ccc;
+            padding-left: 10px;
+            color: #fff;
+        }
+        input:focus{
+            outline-style: none;
+            box-shadow: 0px 0px 10px #4aecfb;
+        }
+        #btn_login,#btn_login_f{
+            margin-top: 20px;
+            color:#fff;
+            padding-left: 20px;
+            padding-right:20px;
+            background: #009926;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#309983), to(#2d5070));
+            cursor: pointer;
+            box-shadow: 0px 1px #111;
+        }
+
+        #btn_login:hover, #btn_login_f:hover{
+            box-shadow: 0px 1px 2px #000 inset;
+        }
+
+        #btn_login_f{
+            background: #375599;
+            background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#335999), to(#253970));
+        }
+
+        #login_txt{
+            width:160px;
+        }
+        #pw_txt{
+            width:160px;
+        }
+        #login_box_title{
+            font-size:28px;
+            font-weight: 100;
+            margin-bottom: 20px;
+        }
+        #forgot_id, #for_signin{
+            margin-top: 14px;
+            cursor:pointer;
+            font-weight: 100;
+            color: #ccc;
+        }
+        #forgot_id:hover, #for_signin:hover{
+            text-decoration: underline;
+        }
+        #for_signin{
+            margin-top: 4px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="login_box">
+    <div id="login_box_title">Log in</div>
+<input type="text" id="login_txt" placeholder="id (example@anbado.com)">
+<input type="password" id="pw_txt" placeholder="password">
+<input type="button" value="login" id="btn_login">
+<input type="button" value="facebook login" id="btn_login_f">
+<div id="forgot_id">아이디/비밀번호를 잃어버리셨나요?</div>
+<div id="for_signin">아이디가 없으신가요?</div>
+</div>
+
+
+</body>
+</html>
