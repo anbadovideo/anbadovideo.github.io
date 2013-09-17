@@ -9,6 +9,8 @@
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.createjs.com/easeljs-0.6.1.min.js"></script>
 <script src="http://localhost:8888/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 <link rel="stylesheet" type="text/css" href="basiccss.css">
 <script type="text/javascript">
 
@@ -73,8 +75,8 @@ document.addEventListener( "DOMContentLoaded", function() {
 //    $("#textinput1").hover(function(){getFocus();});
 
 
-$(".emoticon_button").css("width", 50);
-$(".emoticon_button").css("height", 50); // 이모티콘 이미지 조정
+//$(".emoticon_button").css("width", 50);
+//$(".emoticon_button").css("height", 50); // 이모티콘 size 조정
 
 
 popcornobj = Popcorn.smart("ourvideo"); // 팝콘 객체 생성
@@ -148,9 +150,9 @@ function displayInputPanel(evt){ // on first screen, display text input panel, s
      */
 
 
-    $("#textinput1").show();
-    $("#permissionSelect").show();
-    $("#emoticonTable").show();
+    $("#textinput1").show("scale",300);
+    $("#permissionSelect").show("scale",300);
+    $("#emoticonTable").show("scale",300);
     setTimeout(function(){getFocus();},300);
 
     var emo0 = document.getElementById("emoticon0");
@@ -235,15 +237,15 @@ function keyDownCheck(evt) // DOM의 이벤트를 easeljs의 htmlElement를 통�
 }
 
 function showPanel(){
-    $("#textinput1").show();
-    $("#permissionSelect").show();
-    $("#emoticonTable").show();
+    $("#textinput1").show("scale",300);
+    $("#permissionSelect").show("scale",300);
+    $("#emoticonTable").show("scale",300);
 }
 
 function hidePanel(){
-    $("#textinput1").hide();
-    $("#permissionSelect").hide();
-    $("#emoticonTable").hide();
+    $("#textinput1").hide("scale",300);
+    $("#permissionSelect").hide("scale",300);
+    $("#emoticonTable").hide("scale",300);
 }
 
 function emoticonClick(evt){
@@ -292,13 +294,14 @@ function eventGenerate(eventTypeArg){ // video interaction event generation
             eaTextContent.y = stage.mouseY;
 
             var eaBackPanel = new createjs.Shape();
-            eaBackPanel.graphics.beginFill("#000").drawRect(stage.mouseX,stage.mouseY, eaTextContent.getMeasuredWidth()+130,40);
+            eaBackPanel.graphics.beginFill("rgba(0,0,0,0.8)").drawRect(stage.mouseX,stage.mouseY, eaTextContent.getMeasuredWidth()+130,40);
             eaBackPanel.regX = 40;
             eaBackPanel.regY = 0;
 
+
             var eaProfileImage = new createjs.Bitmap("AssetImages/profile1.png"); // profile example
             eaProfileImage.regX = 350;
-            eaProfileImage.regY = 0;
+            eaProfileImage.regY = 50;
             eaProfileImage.x = stage.mouseX;
             eaProfileImage.y = stage.mouseY;
             eaProfileImage.scaleX = eaProfileImage.scaleY = eaProfileImage.scale = 0.2;
@@ -359,8 +362,8 @@ function eaDisplaySetting(eventObject, content){
 
     var eaTempEmoticon = new createjs.Bitmap("AssetImages/" + content + ".png"); // make emoticon easeljs object
 
-    eaTempEmoticon.regX = -10;
-    eaTempEmoticon.regY = 50;
+    eaTempEmoticon.regX = 80;
+    eaTempEmoticon.regY = -60;
     eaTempEmoticon.x = stage.mouseX;
     eaTempEmoticon.y = stage.mouseY;
     eaTempEmoticon.scaleX = eaTempEmoticon.scaleY = eaTempEmoticon.scale = 0.4;
@@ -377,7 +380,7 @@ function eaDisplaySetting(eventObject, content){
     eaProfileImage.y = stage.mouseY;
     eaProfileImage.scaleX = eaProfileImage.scaleY = eaProfileImage.scale = 0.2;
 
-    eventObject.eaCanvasDisplayObject.addChild(eaBackPanel,eaTempEmoticon , eaProfileImage); // 뒷 배경과 무관하게 넣어주기 위해서 백패널을 이용함
+    eventObject.eaCanvasDisplayObject.addChild(eaProfileImage, eaBackPanel,eaTempEmoticon ); // 뒷 배경과 무관하게 넣어주기 위해서 백패널을 이용함
     stage.addChild(eventObject.eaCanvasDisplayObject);
 
     eventList.push(eventObject); // 전체 이벤트 목록에 저장
@@ -453,7 +456,8 @@ function savetext()
 
 </head>
 <body>
-<div>
+
+<div id="video_wrap">
     <video id="ourvideo" controls="false">
         <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4"/>
         <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.ogv"/>
@@ -461,12 +465,12 @@ function savetext()
     </video>
     <div id="canvascontainer">
         <canvas id="canvas1" width = "640px" height = "430px"></canvas>
-        <canvas id="canvas2"width = "640px" height = "50px"></canvas>
+        <canvas id="canvas2" width = "640px" height = "50px"></canvas>
     </div>
 
 </div>
 
-<input id="textinput1" type = "text" value = "input">
+<input id="textinput1" type = "text" placeholder="input" value = "">
 <select id = "permissionSelect">
     <option value="me only">Me only</option>
     <option value="my friends">My friends</option>
@@ -477,14 +481,15 @@ function savetext()
 <input id="textinput2" type = "text" value = "interactive">
 <input id="textbutton2" type = "submit" value= "now"/>
 
-<table id = "emoticonTable">
-    <tr>
-        <td align="center"><input id="emoticon0" type="image" src="AssetImages/emoticon0.png" name="button" value="Joy" class="emoticon_button"/> </td>
-        <td align="center"><input id="emoticon1" type="image" src="AssetImages/emoticon1.png" name="button" value="Hope" class="emoticon_button"/> </td>
-        <td align="center"><input id="emoticon2" type="image" src="AssetImages/emoticon2.png" name="button" value="Proud" class="emoticon_button"/> </td>
-        <td align="center"><input id="emoticon3" type="image" src="AssetImages/emoticon3.png" name="button" value="Boring" class="emoticon_button"/> </td>
-    </tr>
-</table>
+<div id = "emoticonTable">
+    <div style="float: left">
+            <input id="emoticon0" type="image" src="AssetImages/emoticon0.png" name="button" value="Joy" class="emoticon_button"/>
+            <input id="emoticon1" type="image" src="AssetImages/emoticon1.png" name="button" value="Hope" class="emoticon_button"/>
+            <input id="emoticon2" type="image" src="AssetImages/emoticon2.png" name="button" value="Proud" class="emoticon_button"/>
+            <input id="emoticon3" type="image" src="AssetImages/emoticon3.png" name="button" value="Boring" class="emoticon_button"/>
+    </div>
+</div>
+
 <input id="happy1" type = "button" onclick="happybutton()" value= "happy" >
 <input id="sad1" type = "button" onclick="sadbutton()" value= "sad" >
 <input id="button1" type="button" value="getfocus" onclick="getFocus();">

@@ -1,0 +1,418 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900|Chewy|Luckiest+Guy);
+html{
+    font-family: roboto;
+}
+body{
+    background: #3e2e1f url('http://api.thumbr.it/whitenoise-361x370.png?background=3e2e1fff&noise=87511f&density=45&opacity=23');
+    color:#fff;
+    margin: 20px auto;
+}
+#top{
+    width:1024px;
+    height: 120px;
+    left: 50%;
+    margin-left: -512px;
+    position: relative;
+}
+
+#logo{
+    width:120px;
+    height:120px;
+    background: url('img/logo.png') no-repeat;
+    float: left;
+}
+#start_fire{
+    float: left;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+#start_fire_text{
+    float: left;
+    width: 460px;
+    padding: 4px 10px;
+    border: none;
+    height:30px;
+    border-radius: 2px 0px 0px 2px;
+}
+#bt_start_fire{
+    border: none;
+    width: 100px;
+    height:38px;
+    padding: 4px 10px;
+    font-size: 16px;
+    color: #fff;
+    background: #ff6c08;
+    border-radius: 0px 2px 2px 0px;
+    box-shadow: 0px 2px 0px #a63907;
+    bottom: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+#bt_start_fire:hover{
+    bottom:0px;
+    box-shadow:none;
+}
+
+#top_menu{
+    right:10px;
+    position: relative;
+    float: right;
+}
+.bt_top_menu{
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: #fcb235;
+    cursor: pointer;
+    float: left;
+}
+
+.bt_top_menu:hover{
+    color:#fff;
+}
+
+#middle{
+    width: 1024px;
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    left:50%;
+    margin-left: -512px;
+}
+
+#player_wrap{
+    width: 720px;
+    float: left;
+
+}
+#left_menu, #right_menu{
+    float: left;
+    width:40px;
+    height: 480px;
+}
+
+.bt_all_player{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #ff6c08;
+    color: #fff;
+    margin-top: 10px;
+    position: relative;
+    bottom:0px;
+    float: left;
+    cursor: pointer;
+}
+
+.bt_all_player:hover{
+    background-color: #ff4a1e;
+    z-index: 1;
+    position: relative;
+}
+
+.bt_play{
+    border-radius: 4px 0px 0px 4px;
+    margin-top: 360px;
+    background: #ff6c08 url('img/bt_play.png') no-repeat;
+    margin-left: 5px;
+}
+
+.bt_like{
+    border-radius: 4px 0px 0px 4px;
+    margin-left: 5px;
+}
+
+.bt_setup{
+    border-radius: 0px 4px 4px 0px;
+    margin-top: 210px;
+    background: #ff6c08 url('img/bt_setup.png') no-repeat;
+    margin-left: -5px;
+}
+
+.bt_view{
+    border-radius: 0px 4px 4px 0px;
+    background: #ff6c08 url('img/bt_view.png') no-repeat;
+    margin-left: -5px;
+}
+
+.bt_share{
+    border-radius: 0px 4px 4px 0px;
+    background: #ff6c08 url('img/bt_share.png') no-repeat;
+    margin-left: -5px;
+}
+
+.bt_full{
+    border-radius: 0px 4px 4px 0px;
+    background: #ff6c08 url('img/bt_full.png') no-repeat;
+    margin-left: -5px;
+}
+
+.bt_volume{
+    border-radius: 0px 4px 4px 0px;
+    background: #ff6c08 url('img/bt_volume.png') no-repeat;
+    margin-left: -5px;
+}
+
+
+#player{
+    width: 640px;
+    height: 480px;
+    float: left;
+    background: #111;
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+#areadiv{
+    width: 640px;
+    margin-left: 40px;
+    height:60px;
+    float: left;
+    background: rgba(0,0,0,0.3);
+    margin-top: 4px;
+}
+
+#right_menu_wrap{
+    width: 270px;
+    float: left;
+    margin-left: 24px;
+}
+#viewer{
+    width: 248px;
+    background: rgba(255,255,255,0.9);
+    color: #ccc;
+    float: left;
+    border-radius: 6px 6px 0px 0px;
+    padding: 10px;
+}
+
+#viewer_title{
+    color: #333333;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-family: Chewy, Luckiest Guy;
+}
+
+.fr_1{
+    border-radius: 20px;
+    width:36px;
+    height:36px;
+    background: url('https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/c5.5.65.65/s64x64/581713_579108125453172_81646908_t.jpg') no-repeat;
+    background-size: cover;
+    float: left;margin: 2px;
+    cursor: pointer;
+}
+
+.fr_1.small_thumb{
+    width: 24px;
+    height: 24px;
+}
+
+#suggestion{
+    border-radius: 0px 0px 6px 6px;
+    width: 248px;
+    padding: 10px;
+    color: #333;
+    margin-top: 1px;
+    background: #fff;
+    float: left;
+}
+
+.suggest_module{
+    margin-bottom: 10px;
+    width:100%;
+    height: 200px;
+    border-bottom: 1px dotted #ccc;
+}
+.suggest_sub{
+    color: #333;
+    font-size: 20px;
+    margin-top: 4px;
+    width:100%;
+    font-family: Chewy, Luckiest Guy;
+    float: left;
+}
+.suggest_title{
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 4px;
+    width:100%;
+    float: left;
+}
+
+.suggest_thumb{
+    width: 100%;
+    height: 90px;
+    background: #333;
+    float: left;
+
+}
+.suggest_uploader{
+    width: 100%;
+    font-size: 12px;
+    color: #999;
+    float: left;
+}
+.suggest_date{
+    width: 100%;
+    font-size: 10px;
+    color: #999;
+    float: left;
+}
+.fr_more{
+    color: #333;
+    float: left;
+}
+
+.fire_small{
+    width: 100%;
+    height: 24px;
+    float: left;
+}
+.ic_fire_small{
+    width:24px;
+    height: 24px;
+    background: url('img/ic_fire.png')no-repeat;
+    background-size: cover;
+    float: left;
+}
+.fire_num{
+    height:24px;
+    font-size: 12px;
+    padding: 6px 4px 0px;
+    color: #333;
+    float: left;
+}
+
+
+#summary{
+    width: 100%;
+    height: 200px;
+    background: rgba(0,0,0,0.5);
+    float: left;
+    margin-top: 20px;
+}
+
+
+/*뉴스피드*/
+.left_profile{
+    width:250px;
+    background: rgba(255,255,255,1);
+    padding: 8px;
+    height:200px;
+    border-radius: 4px;
+    float: left;
+}
+
+.left_thumb{
+    width:80px;
+    height:80px;
+    border:3px solid #fff;
+    border-radius: 100px;
+    background: rgba(0,0,0,0.5) url('http://anbado.com/images/profile-minuk.jpg');
+    background-size: cover;
+    float: left;
+    margin-bottom: 80px;
+}
+
+.left_name,.left_modak,.left_wood,.left_view,.left_friends{
+    padding:4px;
+    margin: 4px;
+    float: left;
+    width:140px;
+    color: #333;
+    font-weight: bold;
+    border-bottom:#ccc;
+}
+
+.left_name{
+    font-size:14pt;
+}
+.ic_fire,.ic_wood,.ic_view,.ic_friends{
+    width:20px;
+    height:20px;
+    float: left;
+    background: rgba(255,100,0,0.8);
+    margin-right:8px;
+}
+
+.center_board{
+    margin-left: 20px;
+    float: left;
+}
+.board{
+    width:400px;
+    padding:10px;
+    border-radius: 4px;
+    background: #f9f9f9;
+    float: left;
+}
+
+.board_title{
+    color:#333;
+    font-size: 16pt;
+    font-weight: bold;
+    float: left;
+    width:400px;
+}
+
+.board_starter_name{
+    color:#aaa;
+    float: left;
+    font-size:0.7em;
+}
+
+.board_movie{
+    width:400px;
+    height:120px;
+    background: #111;
+    float: left;
+    margin-top: 4px;
+}
+.board_friends{
+    width:400px;
+    float: left;
+    margin-top: 10px;
+}
+
+    .fr_thumb{
+        width:24px;
+        height:24px;
+        border-radius: 20px;
+        background: #ccc url('http://anbado.com/images/profile-minuk.jpg') no-repeat;
+        background-size: cover;
+        float: left;
+        margin: 4px;
+        cursor:pointer;
+    }
+
+    .board_fire{
+        margin-top: 4px;
+        float: left;
+        width:100%;
+        border-bottom: 1px dotted #ccc;
+        box-shadow: 0px 1px 0px rgba(255,255,255,0.5);
+    }
+    .ic_time_small{
+        width:24px;
+        height:24px;
+        float: left;
+        background: url('img/ic_time_small.png') no-repeat;
+        margin-left:10px;
+    }
+
+    .fire_time{
+        color:#333;
+        float: left;
+        font-size: 12px;
+        height:24px;
+        padding:6px 4px 0px;
+
+    }
+
+
