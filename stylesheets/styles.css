@@ -297,3 +297,9 @@ header li.active>a:after {
     font-size: 1.2em;
     font-weight: 700;
 }
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 18px;
+}
