@@ -210,6 +210,24 @@ footer {
     }
 }
 
+@media print, screen and (max-width: 600px) {
+    iframe {
+        max-width: 300px;
+        max-height: 225px;
+    }
+}
+
+@media print, screen and (max-width: 360px) {
+    iframe {
+        max-width: 220px;
+        max-height: 165px;
+    }
+
+    #team li .description p:last-child {
+        font-size: 0.7em;
+    }
+}
+
 @media print {
     body {
         padding: 0.4in;
