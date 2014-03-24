@@ -211,17 +211,11 @@ footer {
 }
 
 @media print, screen and (max-width: 600px) {
-    iframe {
-        max-width: 300px;
-        max-height: 225px;
-    }
+
 }
 
 @media print, screen and (max-width: 360px) {
-    iframe {
-        max-width: 220px;
-        max-height: 165px;
-    }
+
 
     #team li .description p:last-child {
         font-size: 0.7em;
@@ -314,10 +308,4 @@ header li.active>a:after {
 #team .description .name {
     font-size: 1.2em;
     font-weight: 700;
-}
-
-iframe {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 18px;
 }
