@@ -254,11 +254,11 @@ header li.active>a:after {
     content: "*";
 }
 
-#team {
+.team {
     margin-bottom: 20px;
 }
 
-#team img.profile {
+.team img.profile {
     width: 72px;
     height: 72px;
     border-radius: 36px;
@@ -267,50 +267,50 @@ header li.active>a:after {
     float: left;
 }
 
-#team ul {
+.team ul {
     list-style: none;
     padding: 0;
     padding-bottom: 20px;
     clear: both;
 }
 
-#team ul li {
+.team ul li {
     display: block;
     position: relative;
     margin: 10px 0 0 10px;
 }
 
-#team li .description {
+.team li .description {
     height: 80px;
     padding: 10px 0 0 85px;
 }
 
-#team > .description {
+.team > .description {
     clear: both;
 }
 
-#team li .comment {
+.team li .comment {
     display: none;
 }
 
-#team li .description p {
+.team li .description p {
     margin: 0;
 }
 
-#team li .description p.icons {
+.team li .description p.icons {
     float: right;
 }
 
-#team li .description p a[data-icon] {
+.team li .description p a[data-icon] {
     font-size: 1.6em;
     color: #4f4f4f;
 }
 
-#team li .description p a[data-icon]:hover {
+.team li .description p a[data-icon]:hover {
     background-color: #fff;
 }
 
-#team .description .name {
+.team .description .name {
     font-size: 1.2em;
     font-weight: 700;
 }

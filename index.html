@@ -105,7 +105,7 @@
         jQuery(function() {
             var $comments = $(".comment");
 
-            $("#team img.profile").click(function() {
+            $(".team img.profile").click(function() {
                 var $comment = $(this).parent("li").find($comments);
 
                 $comments.slideUp();
@@ -117,7 +117,8 @@
 
     <script type="text/javascript">
         $(document).ready(function(){
-            $("#team-intro-video").fitVids();
+            $('#team-intro-video').fitVids();
+            $('#modactv-intro-video').fitVids();
         });
     </script>
 </head>
@@ -127,7 +128,7 @@
 <header>
     <h1 class="logo"><img src="images/flatlogo_big.png" class="hires"></h1>
 
-    <p class="description">우리는 비디오에 사람들의 생각을 담고 있습니다.</p>
+    <p class="description">우리는 비디오를 보는 사람들의 공감을 연결하고 있습니다.</p>
 
     <p class="view"><a href="http://github.com/anbadovideo">View the Projects on GitHub
         <small>anbadovideo</small>
@@ -149,8 +150,7 @@
     <hr/>
     <div id="team-intro-video">
         <!-- Introduction Video in Youtube -->
-        <iframe width="420" height="315" src="http://www.youtube.com/embed/YulljONH8Fs?rel=0" frameborder="0"
-                allowfullscreen></iframe>
+        <iframe width="420" height="315" src="http://www.youtube.com/embed/YulljONH8Fs?rel=0" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <h1 id="section-mission">Mission
@@ -209,7 +209,7 @@
         <small>함께하는 사람들</small>
     </h1>
     <hr/>
-    <div id="team">
+    <div class="team">
         <p>안바도 비디오는 디지털 기술을 통해 시청각 정보전달 이상의 비디오 경험을 만들어나가는 크리에이터 그룹입니다. 현재 안바도 비디오는 미래창조과학부 주관
             SW Maestro 3기 과정을 수료한 사람들을 중심으로 이루어져 있습니다.
             팀원들의 프로필 이미지를 클릭하면, 보다 상세한 설명이 나타납니다.</p>
@@ -399,8 +399,8 @@
     </div>
     <div id="modactv-intro-video">
         <!-- modac.TV Video in Youtube -->
-        <iframe width="420" height="315" src="http://youtu.be/nW2LggkBsXw?rel=0" frameborder="0"
-                allowfullscreen></iframe>
+        <iframe width="420" height="315" src="//www.youtube.com/embed/nW2LggkBsXw" frameborder="0" allowfullscreen></iframe>
+
     </div>
 </div>
 <div>
@@ -432,7 +432,7 @@
 
         <p>2014년 4월 SK Planet / D.camp로부터 투자 유치</p>
 
-        <p><a href="https://itunes.apple.com/kr/app/modac.tv/id844651409?mt=8">modac.TV for iPhone beta 출시</a></p>
+        <p><a href="https://itunes.apple.com/kr/app/modac.tv/id844651409?mt=8">2014년 5월 modac.TV for iPhone beta 출시</a></p>
 
         <p><a href="http://techcrunch.com/2014/04/30/finishing-its-third-batch-koreas-kstartup-accelerator-sees-great-hope-for-seouls-tech-ecosystem/?ncid=rss">2014년 5월 Techcrunch 노출 </a></p>
 
@@ -448,7 +448,7 @@
         <small>안바도비디오와 함께했고 지금은 훌륭히 자신의 길을 걷고 있는 멋쟁이들을 소개합니다. </small>
     </h1>
     <hr/>
-    <div id="team">
+    <div class="team">
 
         <ul>
             <li>
